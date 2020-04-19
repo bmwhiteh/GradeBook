@@ -148,13 +148,29 @@ namespace GradeBook
             Goal = use a method to do Exercise 9
             Learn = 
             Code Used = 
-        */
+        
         var book = new Book("Bailey's Grade Book");
             book.AddGrade(89.1);
             book.AddGrade(90.5);
             book.AddGrade(77.5);
             book.ShowStatistics();
 
+            Console.WriteLine($"Hello {args[0]}!");
+        */
+
+        /*Module 5 Part 6 - Minute 9:00
+        */
+        var book = new Book("Bailey's Grade Book");
+        book.AddGrade(89.1);
+        book.AddGrade(90.5);
+        book.AddGrade(77.5);
+        
+        var stats = book.GetStatistics();
+        Console.WriteLine($"The lowest grade is {stats.Low:N1}.");
+        Console.WriteLine($"The highest grade is {stats.High:N1}.");
+        Console.WriteLine($"The average grade is {stats.Average:N1}.");
+ 
+       
         }
     }
 }

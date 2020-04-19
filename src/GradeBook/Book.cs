@@ -10,7 +10,7 @@ namespace GradeBook
         Learn = How to create Classes in C#
         Code Used = class Book {}
     */
-    class Book
+    public class Book
     {
 
         /*
@@ -57,7 +57,7 @@ namespace GradeBook
 
         /*Exercise 10
             Use a method to complete Exercise 9
-        */
+        
         public void ShowStatistics()
         {
             var result = 0.0;
@@ -79,9 +79,31 @@ namespace GradeBook
             Console.WriteLine($"The lowest grade is {lowGrade:N1}.");
             Console.WriteLine($"The highest grade is {highGrade:N1}.");
             Console.WriteLine($"The average grade is {result:N1}.");
+        }*/
+
+
+         /*Module 5 Part 6
+            Revise code to better compartementalize code
+            Statistics.cs also created here
+        */
+        public Statistics GetStatistics()
+        {
+            var result = new Statistics();
+            result.Average = 0.0;
+            result.High = double.MinValue;
+            result.Low = double.MaxValue;
+            
+            foreach(var grade in grades)
+            {
+                result.High = Math.Max(grade, result.High);
+                result.Low = Math.Min(grade, result.Low);
+                result.Average += grade;
+            }
+            result.Average /= grades.Count;
+
+            return result;
+
         }
-
-
 
         /*
             Exercise 7

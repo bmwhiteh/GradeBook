@@ -31,7 +31,7 @@ namespace Gradebook.Tests
             dotnet add reference ..\..\src\GradeBook\GradeBook.csproj
         */
         [Fact]
-        public void Test1()
+        public void BookCalculatesAnAverageGrade()
         {
             //arrange
             var book = new Book("");

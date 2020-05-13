@@ -33,7 +33,7 @@ namespace GradeBook
                 want the acting object, so in this case, this.name is referencing 
                 private string name on the left and the parameter name on the right.
             */
-            this.name = name;
+            Name = name;
             
         }
 
@@ -116,7 +116,7 @@ namespace GradeBook
         */
 //instance fields
         private List<double> grades;
-        private string name;
+        public string Name;
 
     }
     
